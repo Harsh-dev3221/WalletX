@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Net Wallet</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 360px;
+            min-height: 500px;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #4c6ef5;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        #main-content {
+            padding: 16px;
+        }
+
+        .connection-request {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .site-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .accounts-section {
+            width: 100%;
+            margin: 16px 0;
+            padding: 8px;
+            background-color: #f4f6f8;
+            border-radius: 8px;
+        }
+
+        .account-item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            margin: 8px 0;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .account-item input[type="checkbox"] {
+            margin-right: 12px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 24px;
+        }
+
+        button {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .reject-button {
+            background-color: #f1f3f5;
+            color: #495057;
+        }
+
+        .approve-button {
+            background-color: #4c6ef5;
+            color: white;
+        }
+
+        .reject-button:hover {
+            background-color: #e9ecef;
+        }
+
+        .approve-button:hover {
+            background-color: #3b5bdb;
+        }
+
+        .success-message,
+        .rejection-message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .success-icon,
+        .rejection-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .success-icon {
+            color: #40c057;
+        }
+
+        .rejection-icon {
+            color: #fa5252;
+        }
+
+        .error-message {
+            padding: 16px;
+            background-color: #ffe3e3;
+            color: #e03131;
+            border-radius: 8px;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        /* Normal wallet UI styles */
+        .wallet-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .account-card {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .account-address {
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        .network-indicator {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #4c6ef5;
+            color: white;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+        }
+    </style>
+    <script src="popup.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Cross-Net Wallet</h1>
+    </header>
+
+    <div id="main-content">
+        <!-- Content will be dynamically populated by JavaScript -->
+        <div class="loading-message">
+            Loading wallet...
+        </div>
+    </div>
+</body>
+
+</html>
